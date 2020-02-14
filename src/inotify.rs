@@ -436,7 +436,8 @@ impl EventLoop {
             | WatchMask::CLOSE_WRITE
             | WatchMask::MODIFY
             | WatchMask::MOVED_FROM
-            | WatchMask::MOVED_TO;
+            | WatchMask::MOVED_TO
+            | WatchMask::DONT_FOLLOW;
 
         if watch_self {
             watchmask.insert(WatchMask::DELETE_SELF);
